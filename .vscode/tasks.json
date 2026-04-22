@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C/C++ 一键编译运行",
+            "type": "shell",
+            "command": "cmd",
+            "args": [
+                "/c",
+                "chcp 65001 >nul && g++ -g -fexec-charset=UTF-8 -finput-charset=UTF-8 \"${file}\" -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" && echo 编译成功！ && \"${fileDirname}\\${fileBasenameNoExtension}.exe\" && echo. && pause"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            }
+        }
+    ]
+}
