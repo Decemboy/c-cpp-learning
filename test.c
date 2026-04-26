@@ -4,7 +4,7 @@
 void ranking(int* p, int n);
 void print_ranking(int* p, int n);
 int* getMem(int num) {
-  //调用malloc申请内存
+  //调用calloc申请内存
   int* p = (int*)calloc(num,sizeof(int));
   //返回申请到的地址
   return p;
